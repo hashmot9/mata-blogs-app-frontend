@@ -24,7 +24,7 @@ const BlogUpdate = () => {
     const FetchSingleBlogs = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/v1/blog/single-blog/${id}`
+          `https://meta-blog-backend-p.vercel.app/api/v1/blog/single-blog/${id}`
         );
         //console.log(response.data.blog);
         const blogs = response.data.blog;
@@ -53,7 +53,7 @@ const BlogUpdate = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/v1/blog/update-blog/${id}`,
+        `https://meta-blog-backend-p.vercel.app/api/v1/blog/update-blog/${id}`,
         BlogData
       );
       console.log(response.data.blog);

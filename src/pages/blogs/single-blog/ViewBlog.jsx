@@ -15,7 +15,7 @@ const ViewBlog = () => {
     const FetchBlogs = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/v1/blog/single-blog/${id}`
+          `https://meta-blog-backend-p.vercel.app/api/v1/blog/single-blog/${id}`
         );
         setBlogs(response.data.blog);
         setIsLoading(false);

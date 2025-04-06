@@ -10,7 +10,7 @@ const BlogList = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/blog/all-blogs")
+    fetch("https://meta-blog-backend-p.vercel.app/api/v1/blog/all-blogs")
       .then((res) => res.json())
       .then((data) => {
         setBlogArry(data);

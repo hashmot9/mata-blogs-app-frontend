@@ -8,7 +8,7 @@ const ManageBlog = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/blog/all-blogs")
+    fetch("https://meta-blog-backend-p.vercel.app/api/v1/blog/all-blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((error) => {
@@ -20,7 +20,7 @@ const ManageBlog = () => {
     if (window.confirm("Are you sure you want to delete")) {
       try {
         await axios.delete(
-          `http://localhost:8080/api/v1/blog/delete-blog/${id}`
+          `https://meta-blog-backend-p.vercel.app/api/v1/blog/delete-blog/${id}`
         );
         setBlogs(blogs.filter((blog) => blog._id !== id));
       } catch (error) {

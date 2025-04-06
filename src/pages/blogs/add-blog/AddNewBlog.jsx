@@ -26,7 +26,7 @@ const AddNewBlog = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/v1/blog/create-blog`,
+        `https://meta-blog-backend-p.vercel.app/api/v1/blog/create-blog`,
         BlogData
       );
       // console.log(response.data);
